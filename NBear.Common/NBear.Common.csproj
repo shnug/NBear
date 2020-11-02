@@ -1,4 +1,4 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -15,6 +15,9 @@
     <SccProvider>SAK</SccProvider>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>nbear.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>D:\github\NBear\Backup7\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,6 +40,9 @@
     <DocumentationFile>bin\Release\NBear.Common.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
@@ -91,30 +97,6 @@
     <Compile Include="JSON\JSONObject.cs" />
     <Compile Include="JSON\JSONTokener.cs" />
     <Compile Include="JSON\JSONUtils.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\Converters\HtmlColorConverter.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\Converters\XmlNodeConverter.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\Identifier.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JavaScriptArray.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JavaScriptConstructor.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JavaScriptConvert.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JavaScriptObject.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JavaScriptParameters.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JavaScriptUtils.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JsonConverter.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JsonConverterCollection.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JsonHandler.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JsonReader.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JsonReaderException.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JsonSerializationException.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JsonSerializer.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JsonToken.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JsonWriter.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\JsonWriterException.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\StringBuffer.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\Utilities\CollectionUtils.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\Utilities\HandlerBase.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\Utilities\ReflectionUtils.cs" />
-    <Compile Include="JSON\Newtonsoft.Json\Utilities\StringUtils.cs" />
     <Compile Include="MetaDataManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerializationManager.cs" />
@@ -123,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="nbear.snk" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
