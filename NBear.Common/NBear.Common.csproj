@@ -1,0 +1,138 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8F80BEB-93A6-4966-842F-92E38E11082C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NBear.Common</RootNamespace>
+    <AssemblyName>NBear.Common</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>nbear.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DBC_CHECK_PRECONDITION</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\NBear.Common.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caching\Cache.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Common\CommonUtils.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Common\SerializationManager.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\CompressionManager.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Common\CommandLineParser.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Common\CRC.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Common\InBuffer.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Common\OutBuffer.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Compress\LzmaAlone\SevenZipHelper.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Compress\LZMA\LzmaBase.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Compress\LZMA\LzmaDecoder.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Compress\LZMA\LzmaEncoder.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Compress\LZ\IMatchFinder.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Compress\LZ\LzBinTree.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Compress\LZ\LzInWindow.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Compress\LZ\LzOutWindow.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Compress\RangeCoder\RangeCoder.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Compress\RangeCoder\RangeCoderBit.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\Compress\RangeCoder\RangeCoderBitTree.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Compression\SevenZip\ICoder.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Cryptography\CryptographyManager.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.DesignByContract\DesignByContract.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Reflection\Emit\DynamicMethodProxyFactory.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Reflection\Emit\EmitUtils.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.Reflection\ReflectionUtils.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.SqlQuery\ColumnFormatter.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.SqlQuery\ExpressionClip.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.SqlQuery\ExpressionFactory.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.SqlQuery\FromClip.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.SqlQuery\IExpression.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.SqlQuery\QueryOperators.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.SqlQuery\SqlQueryUtils.cs" />
+    <Compile Include="CommonLibraries\CN.Teddy.SqlQuery\WhereClip.cs" />
+    <Compile Include="CompressionManager.cs" />
+    <Compile Include="CryptographyManager.cs" />
+    <Compile Include="DesignByContract.cs" />
+    <Compile Include="EntityArrayList.cs" />
+    <Compile Include="EntityQuery.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="ILogable.cs" />
+    <Compile Include="JSON\JSONArray.cs" />
+    <Compile Include="JSON\JSONFacade.cs" />
+    <Compile Include="JSON\JSONObject.cs" />
+    <Compile Include="JSON\JSONTokener.cs" />
+    <Compile Include="JSON\JSONUtils.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\Converters\HtmlColorConverter.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\Converters\XmlNodeConverter.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\Identifier.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JavaScriptArray.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JavaScriptConstructor.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JavaScriptConvert.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JavaScriptObject.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JavaScriptParameters.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JavaScriptUtils.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JsonConverter.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JsonConverterCollection.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JsonHandler.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JsonReader.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JsonReaderException.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JsonSerializationException.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JsonSerializer.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JsonToken.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JsonWriter.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\JsonWriterException.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\StringBuffer.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\Utilities\CollectionUtils.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\Utilities\HandlerBase.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\Utilities\ReflectionUtils.cs" />
+    <Compile Include="JSON\Newtonsoft.Json\Utilities\StringUtils.cs" />
+    <Compile Include="MetaDataManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerializationManager.cs" />
+    <Compile Include="Types\Tree.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nbear.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

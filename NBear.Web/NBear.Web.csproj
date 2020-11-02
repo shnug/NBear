@@ -1,0 +1,114 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{836E1F12-C5B3-43AB-9117-9458A24BC888}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NBear.Web</RootNamespace>
+    <AssemblyName>NBear.Web</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>nbear.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;DBC_CHECK_PRECONDITION</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\NBear.Web.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\AjaxTemplate.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Page.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\UserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\WebControls\SerialNumberValidator.cs" />
+    <Compile Include="UI\WebHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedImages\0.gif" />
+    <EmbeddedResource Include="EmbeddedImages\1.gif" />
+    <EmbeddedResource Include="EmbeddedImages\2.gif" />
+    <EmbeddedResource Include="EmbeddedImages\3.gif" />
+    <EmbeddedResource Include="EmbeddedImages\4.gif" />
+    <EmbeddedResource Include="EmbeddedImages\5.gif" />
+    <EmbeddedResource Include="EmbeddedImages\6.gif" />
+    <EmbeddedResource Include="EmbeddedImages\7.gif" />
+    <EmbeddedResource Include="EmbeddedImages\8.gif" />
+    <EmbeddedResource Include="EmbeddedImages\9.gif" />
+    <EmbeddedResource Include="EmbeddedImages\A.gif" />
+    <EmbeddedResource Include="EmbeddedImages\B.gif" />
+    <EmbeddedResource Include="EmbeddedImages\C.gif" />
+    <EmbeddedResource Include="EmbeddedImages\D.gif" />
+    <EmbeddedResource Include="EmbeddedImages\E.gif" />
+    <EmbeddedResource Include="EmbeddedImages\F.gif" />
+    <EmbeddedResource Include="EmbeddedImages\G.gif" />
+    <EmbeddedResource Include="EmbeddedImages\H.gif" />
+    <EmbeddedResource Include="EmbeddedImages\I.gif" />
+    <EmbeddedResource Include="EmbeddedImages\J.gif" />
+    <EmbeddedResource Include="EmbeddedImages\K.gif" />
+    <EmbeddedResource Include="EmbeddedImages\L.gif" />
+    <EmbeddedResource Include="EmbeddedImages\M.gif" />
+    <EmbeddedResource Include="EmbeddedImages\N.gif" />
+    <EmbeddedResource Include="EmbeddedImages\O.gif" />
+    <EmbeddedResource Include="EmbeddedImages\P.gif" />
+    <EmbeddedResource Include="EmbeddedImages\Q.gif" />
+    <EmbeddedResource Include="EmbeddedImages\R.gif" />
+    <EmbeddedResource Include="EmbeddedImages\S.gif" />
+    <EmbeddedResource Include="EmbeddedImages\T.gif" />
+    <EmbeddedResource Include="EmbeddedImages\U.gif" />
+    <EmbeddedResource Include="EmbeddedImages\V.gif" />
+    <EmbeddedResource Include="EmbeddedImages\W.gif" />
+    <EmbeddedResource Include="EmbeddedImages\X.gif" />
+    <EmbeddedResource Include="EmbeddedImages\Y.gif" />
+    <EmbeddedResource Include="EmbeddedImages\Z.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nbear.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
